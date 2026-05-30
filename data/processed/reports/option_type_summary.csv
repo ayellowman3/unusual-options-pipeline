@@ -1,0 +1,3 @@
+option_type,total_events,unusual_events,unusual_event_pct,total_volume,avg_implied_volatility,avg_unusual_activity_score
+CALL,500,237,0.474,994453,0.6859,0.566
+PUT,500,227,0.454,941387,0.68,0.55
