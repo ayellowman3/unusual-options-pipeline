@@ -6,4 +6,5 @@ __pycache__/
 data/raw/*.jsonl
 data/processed/*.jsonl
 data/stream/*.jsonl
+data/spark_output/
 .DS_Store

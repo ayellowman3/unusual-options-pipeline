@@ -16,6 +16,10 @@ python3 src/reporting/generate_reports.py \
   --input data/processed/options_events_enriched.jsonl \
   --output-dir data/processed/reports
 
+python3 src/spark/spark_batch_job.py \
+  --input data/processed/options_events_enriched.jsonl \
+  --output-dir data/spark_output
+
 python3 src/warehouse/load_warehouse.py \
   --input data/processed/options_events_enriched.jsonl \
   --schema sql/schema.sql \
@@ -30,6 +34,17 @@ pytest
 
 This local JSONL stream simulates Kafka/Kinesis for interview practice.
 In production, replace the JSONL stream with Kafka, AWS MSK, or Kinesis.
+
+## Spark Batch Processing
+
+Locally this runs in single-machine Spark mode.
+In production, this maps to AWS EMR, AWS Glue, Databricks, or Spark on Kubernetes.
+
+```bash
+python3 src/spark/spark_batch_job.py \
+  --input data/processed/options_events_enriched.jsonl \
+  --output-dir data/spark_output
+```
 
 Terminal 1:
 
