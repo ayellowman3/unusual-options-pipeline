@@ -5,4 +5,5 @@ __pycache__/
 .env
 data/raw/*.jsonl
 data/processed/*.jsonl
+data/stream/*.jsonl
 .DS_Store
